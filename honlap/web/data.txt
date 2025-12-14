@@ -1,0 +1,3 @@
+logo:
+Kék: #2F6498, zöld: #0EB9B0
+Betűtípus: Delius Swash Caps
