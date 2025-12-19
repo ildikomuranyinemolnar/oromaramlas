@@ -1,6 +1,7 @@
 :root {
-    --primary-color: #2c4b6a; /* #171b54 #2c4b6a */
+    --primary-color: #2F6498;
     --light-bg: #f8f9fa;
+    --hover-color: #0EB9B0;
 }
 
 body {
@@ -9,7 +10,87 @@ body {
     background-color: #ffffff;
 }
 
+/* Navbar Styling */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(30, 58, 95, 0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    margin: 0 15px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link.gift {
+    color: var(--primary-color);
+    padding: 0px 8px;
+    height: 100%;
+    font-size: 25px;
+}
+
+.navbar-nav .nav-link.active {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--hover-color);
+    background-color: var(--light-bg);
+}
+
+.navbar-nav .nav-link.gift:hover {
+    background-color: rgb(0, 0, 0, 0);
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border: 2px solid var(--primary-color);
+    padding: 8px 12px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 95, 0.25);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231E3A5F' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 /* Hero Section */
+
+.hero-logo-fullscreen {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-logo-fullscreen img {
+    max-width: 90%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
 .hero-section {
     padding: 100px 0;
     background: linear-gradient(135deg, rgba(30, 58, 95, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
@@ -105,6 +186,7 @@ body {
 
 .skill-item:hover {
     background-color: rgba(30, 58, 95, 0.05);
+    border-color: var(--hover-color);
 }
 
 .skill-name {
@@ -141,7 +223,8 @@ body {
 
 .contact-btn:hover {
     background-color: white;
-    color: var(--primary-color);
+    border-color: var(--hover-color);
+    color: var(--hover-color);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(30, 58, 95, 0.3);
 }
@@ -161,7 +244,8 @@ body {
 }
 
 .social-link:hover {
-    background-color: var(--primary-color);
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
     color: white;
     transform: scale(1.1);
 }
@@ -186,5 +270,13 @@ footer {
 
     .hero-title {
         font-size: 2rem;
+    }
+
+    .no-mobile-display {
+        display: none;
+    }
+
+    .hero-section{
+        padding-top: 100px;
     }
 }
